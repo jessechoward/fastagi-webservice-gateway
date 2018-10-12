@@ -38,7 +38,7 @@ class AGISession extends EventEmitter
 
 		// net.socket event handlers
 		// https://nodejs.org/api/net.html#net_event_close_1
-		this._socket.on('close', () => {this.updateState('closed')});
+		this._socket.on('close', () => {this.updateState('closed');});
 		this._socket.on('data', this.inputHandler.bind(this));
 		this._socket.on('end', this.close.bind(this));
 		this._socket.on('error', this.errorHandler.bind(this));

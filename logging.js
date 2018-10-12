@@ -31,8 +31,7 @@ const logger = winston.createLogger(
 	levels: winston.config.syslog.levels,
 	level: log_level,
 	// set the format of the logging
-	format: winston.format.combine
-	(
+	format: winston.format.combine(
 		// add some basic app info
 		appInfo(),
 		winston.format.timestamp(),

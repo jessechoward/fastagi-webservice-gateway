@@ -111,6 +111,6 @@ class AGIServer extends EventEmitter
 			}
 		}
 	}
-};
+}
 
 module.exports = AGIServer;
